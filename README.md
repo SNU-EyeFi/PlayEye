@@ -45,7 +45,7 @@ Before running PlayEye, make sure to modify the hardware-related code to fit you
 3. **Run PlayEye:**
 ```
 export PYTHONPATH=./
-python main.py <window_type> [-v]
+python -m scripts.main <window_type> [-v]
 ```
 
 - `<window_type>`: Specify the window type, which can be either `vertical` or `horizontal`.
@@ -53,7 +53,7 @@ python main.py <window_type> [-v]
 
 Example:
 ```
-python main.py horizontal -v
+python -m scripts.main horizontal -v
 ```
 
 ## Our Team, EyeFi
