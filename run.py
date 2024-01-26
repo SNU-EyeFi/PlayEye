@@ -45,7 +45,7 @@ class Runner():
         picam2.set_controls({"AfMode": controls.AfModeEnum.Continuous})
         return picam2
 
-    def get_gaze_crop(self, left, right):
+    def get_gaze_crop(self, left, right, rgb_frame_raw):
         if left is not None and right is not None:
             left_x, left_y = left
             right_x, right_y = right
@@ -170,7 +170,7 @@ class Runner():
                 # Show gaze crop on UI
                 left = self.gaze.pupil_left_coords()
                 right = self.gaze.pupil_right_coords()
-                cropped_frame_rgb = self.get_gaze_crop(left, right)
+                cropped_frame_rgb = self.get_gaze_crop(left, right, rgb_frame)
                 if cropped_frame_rgb is not None:
                     self.window.set_crop(cropped_frame_rgb)
 
