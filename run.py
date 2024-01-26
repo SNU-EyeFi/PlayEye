@@ -2,7 +2,7 @@ import cv2
 import time
 from PyQt5.QtWidgets import QApplication
 from PyQt5.QtCore import Qt, QTimer
-from gaze_tracking import GazeTracking
+from lib.gaze_tracking import GazeTracking
 from util import EyeGuide
 from util import Switch
 from util import VerticalWindow, HorizontalWindow
