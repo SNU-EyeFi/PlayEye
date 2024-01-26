@@ -32,7 +32,7 @@ To run PlayEye on your system, follow these steps:
 
 1. **Clone the Repository:**
 ```
-git clone https://github.com/your-username/playeye.git
+git clone https://github.com/SNU-EyeFi/PlayEye.git
 ```
 
 2. **Modify Hardware Code:**
