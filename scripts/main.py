@@ -1,24 +1,28 @@
+import argparse
 import sys
 from run import Runner
 
-if __name__ == "__main__":
-    if len(sys.argv) < 2:
-        print("Usage: python main.py <window_type> [-v]")
-        sys.exit(1)
+def parse_arguments():
+    parser = argparse.ArgumentParser(description="Description of your script.")
 
-    window_type = sys.argv[1]
-    
-    if(window_type not in ["vertical", "horizontal"]):
-        print("Invalid window type. Please enter 'vertical' or 'horizontal'.")
-        sys.exit(1)
+    parser.add_argument("window_type", choices=["vertical", "horizontal"], help="Specify the window type.")
 
-    if len(sys.argv) > 2 and sys.argv[2] == "-v":
-        verbose = True
-        if(window_type == "vertical"):
-            print("Window type 'vertical' doesn't have verbose option")
-            sys.exit(1)
-    else:
-        verbose = False
+    parser.add_argument("-v", "--verbose", action="store_true", help="Enable verbose mode.")
+
+    return parser.parse_args()
+
+def main():
+    args = parse_arguments()
+
+    window_type = args.window_type
+    verbose = args.verbose
+
+    if verbose and window_type == "vertical":
+        print("Window type 'vertical' doesn't have verbose option.")
+        sys.exit(1)
 
     runner = Runner(window_type, verbose)
     runner.run()
+
+if __name__ == "__main__":
+    main()
