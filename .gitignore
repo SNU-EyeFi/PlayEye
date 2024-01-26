@@ -1,0 +1,6 @@
+build_and_run.sh
+requirements.txt
+.DS_Store
+__pycache__/
+gaze_tracking/__pycache__/gaze_tracking.cpython-38.pyc
+gaze_tracking/__pycache__/__init__.cpython-38.pyc
