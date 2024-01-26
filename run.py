@@ -62,7 +62,8 @@ class Runner():
             cropped_frame_rgb = rgb_frame_raw[crop_top:crop_bottom, crop_left:crop_right]
 
             return cropped_frame_rgb
-        else return None
+        else:
+            return None
         
 
     def run(self):
