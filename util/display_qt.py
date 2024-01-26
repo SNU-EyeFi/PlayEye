@@ -42,7 +42,7 @@ class VerticalWindow(QMainWindow):
 
         # Create a label for the brand logo at the top
         self.logo_label = QLabel(self)
-        self.logo_pixmap = QPixmap("util/logo.png")  
+        self.logo_pixmap = QPixmap("./images/logo.png")  
         w = int(self.main_widget.width()/3)
         h = int(self.logo_pixmap.height()/2)
         self.logo_label.setPixmap(self.logo_pixmap.scaled(w, h, aspectRatioMode=Qt.KeepAspectRatio))
@@ -307,7 +307,7 @@ class HorizontalWindow(QMainWindow):
 
         # Create a label for the brand logo at the top
         self.logo_label = QLabel(self)
-        self.logo_pixmap = QPixmap("/home/gongsang/Gongwoo/GazeTracking/util/logo.png") 
+        self.logo_pixmap = QPixmap("./images/logo.png") 
         w = int(self.left_margin_width)	
         h = int(self.logo_pixmap.height()/(self.logo_pixmap.width()) * self.left_margin_width)	
         self.logo_label.setPixmap(self.logo_pixmap.scaled(w, h, aspectRatioMode=Qt.KeepAspectRatio))
@@ -660,7 +660,7 @@ class HorizontalWindow(QMainWindow):
         text = f"<span style='color: #FFC701;'>OFF</span><br><span style='color: #808080;'>Please turn on </span><br>to use</span>"
         self.mode_label.setText(text)
         self.turn_off_all_box()
-        no_signal = np.array(Image.open("/home/gongsang/Gongwoo/GazeTracking/util/no_signal.png"))
+        no_signal = np.array(Image.open("./images/no_signal.png"))
         self.set_image(no_signal)
 
 

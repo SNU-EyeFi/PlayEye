@@ -1,6 +1,6 @@
 # PlayEye - Toy for Preventing Child Myopia
 
-![EyeFi Team](./image/PlayEye.png)
+![EyeFi Team](./assets/PlayEye.png)
 
 ## Overview
 
@@ -38,13 +38,14 @@ git clone https://github.com/SNU-EyeFi/PlayEye.git
 2. **Modify Hardware Code:**
 Before running PlayEye, make sure to modify the hardware-related code to fit your environment. Please check and update the following files according to your setup:
 
-- `led.py`
-- `switch.py`
-- `touch.py`
+- `util/led.py`
+- `util/switch.py`
+- `util/touch.py`
 
 3. **Run PlayEye:**
 ```
-python main.py <window_type> [-v]
+export PYTHONPATH=./
+python -m scripts.main <window_type> [-v]
 ```
 
 - `<window_type>`: Specify the window type, which can be either `vertical` or `horizontal`.
@@ -52,7 +53,7 @@ python main.py <window_type> [-v]
 
 Example:
 ```
-python main.py horizontal -v
+python -m scripts.main horizontal -v
 ```
 
 ## Our Team, EyeFi
