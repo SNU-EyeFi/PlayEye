@@ -38,9 +38,9 @@ git clone https://github.com/SNU-EyeFi/PlayEye.git
 2. **Modify Hardware Code:**
 Before running PlayEye, make sure to modify the hardware-related code to fit your environment. Please check and update the following files according to your setup:
 
-- `led.py`
-- `switch.py`
-- `touch.py`
+- `util/led.py`
+- `util/switch.py`
+- `util/touch.py`
 
 3. **Run PlayEye:**
 ```
