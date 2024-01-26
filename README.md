@@ -1,6 +1,6 @@
 # PlayEye - Toy for Preventing Child Myopia
 
-![EyeFi Team](./image/PlayEye.png)
+![EyeFi Team](./assets/PlayEye.png)
 
 ## Overview
 
