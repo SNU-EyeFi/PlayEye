@@ -44,6 +44,7 @@ Before running PlayEye, make sure to modify the hardware-related code to fit you
 
 3. **Run PlayEye:**
 ```
+export PYTHONPATH=./
 python main.py <window_type> [-v]
 ```
 
